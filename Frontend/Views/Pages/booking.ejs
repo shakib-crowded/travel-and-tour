@@ -1,0 +1,99 @@
+<% layout("../Layout/boilerplate") %>
+
+
+    <link rel="stylesheet" href="/css/booking.css">
+    <div class="form-container">
+        <div class="form-header">
+            <h1>Book Your Journey</h1>
+            <p>Embark on an unforgettable adventure with "A Journey of Many Features"</p>
+        </div>
+
+        <form class="needs-validation" action="/booking" method="post" id="bookingForm"
+            enctype="application/x-www-form-urlencoded">
+
+            <div class="inline-fields">
+                <div class="form-group">
+                    <label class="required" for="name">Full Name</label>
+                    <input type="text" id="name" name="fullName" class="input form-control" required>
+                    <div class="invalid-feedback">Please enter your full name.</div>
+                </div>
+                <div class="form-group">
+                    <label class="required" for="email">Email</label>
+                    <input type="email" id="email" name="email" class="input form-control" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+            </div>
+
+            <div class="inline-fields">
+                <div class="form-group">
+                    <label class="required" for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="input form-control" required>
+                    <div class="invalid-feedback">Please enter a valid phone number.</div>
+                </div>
+                <div class="form-group">
+                    <label class="required" for="departure">Preferred Departure Date</label>
+                    <input type="date" id="departure" name="departure" class="input form-control" required>
+                    <div class="invalid-feedback">Please select a departure date.</div>
+                </div>
+            </div>
+
+            <div class="inline-fields">
+                <div class="form-group">
+                    <label class="required" for="adults">Number of Adults</label>
+                    <input type="number" id="adults" name="adults" class="input form-control" min="1" max="10" required>
+                    <div class="invalid-feedback">At least 1 adult is required.</div>
+                </div>
+                <div class="form-group">
+                    <label for="children">Number of Children</label>
+                    <input type="number" id="children" name="children" class="input form-control" min="0" max="10">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="required" for="class">Preferred Travel Class</label>
+                <select id="class" name="preferredClass" class="input form-select" required>
+                    <option value="">Select a class</option>
+                    <option value="economy">Economy</option>
+                    <option value="business">Business</option>
+                    <option value="first-class">First Class</option>
+                </select>
+                <div class="invalid-feedback">Please select a travel class.</div>
+            </div>
+
+            <div class="form-group">
+                <label class="required" for="meal">Meal Preference</label>
+                <select id="meal" name="meal" class="input form-select" required>
+                    <option value="">Select a meal preference</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="non-vegetarian">Non-Vegetarian</option>
+                    <option value="special">Special Dietary Needs</option>
+                </select>
+                <div class="invalid-feedback">Please select a meal preference.</div>
+            </div>
+
+            <div class="form-group">
+                <label class="required" for="emergency-contact">Emergency Contact</label>
+                <input type="tel" id="emergency-contact" name="emergencyContact" class="input form-control" required>
+                <div class="invalid-feedback">Please enter an emergency contact number.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="language">Preferred Language</label>
+                <select id="language" name="language" class="input form-select">
+                    <option value="">Select a language</option>
+                    <option value="english">English</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="french">French</option>
+                    <option value="german">German</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="requests">Special Requests</label>
+                <textarea id="requests" name="requests" class="input form-control"
+                    placeholder="Any special requirements or requests..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Book Now</button>
+        </form>
+    </div>

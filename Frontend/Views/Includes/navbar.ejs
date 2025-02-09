@@ -1,0 +1,62 @@
+<!-- Topbar Start -->
+<div class="container-fluid bg-dark px-5 d-none d-lg-block">
+
+</div>
+<!-- Topbar End -->
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background-color: white;">
+    <a href="/" class="navbar-brand p-0">
+        <img src="/images/logox2.png" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="fa fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0">
+            <a href="/" class="nav-item nav-link <%= currentRoute === '/' ? 'active' : '' %>">Home</a>
+            <a href="/about" class="nav-item nav-link <%= currentRoute === '/about' ? 'active' : '' %>">About</a>
+            <a href="/services"
+                class="nav-item nav-link <%= currentRoute === '/services' ? 'active' : '' %>">Services</a>
+            <a href="/packages"
+                class="nav-item nav-link <%= currentRoute === '/packages' ? 'active' : '' %>">Packages</a>
+            <div class="nav-item dropdown">
+                <a href="#"
+                    class="nav-link dropdown-toggle <%= currentRoute.includes('/destinations') || currentRoute.includes('/booking') || currentRoute.includes('/travel-guides') || currentRoute.includes('/testimonials') || currentRoute.includes('/process') ? 'active' : '' %>"
+                    data-bs-toggle="dropdown">Pages</a>
+                <div class="dropdown-menu m-0">
+                    <a href="/destinations"
+                        class="dropdown-item <%= currentRoute === '/destinations' ? 'active' : '' %>">Destination</a>
+                    <a href="/query" class="dropdown-item <%= currentRoute === '/query' ? 'active' : '' %>">Query</a>
+                    <a href="/travel-guides"
+                        class="dropdown-item <%= currentRoute === '/travel-guides' ? 'active' : '' %>">Travel Guides</a>
+                    <a href="/testimonials"
+                        class="dropdown-item <%= currentRoute === '/testimonials' ? 'active' : '' %>">Testimonial</a>
+                    <a href="/process"
+                        class="dropdown-item <%= currentRoute === '/process' ? 'active' : '' %>">Process</a>
+                </div>
+            </div>
+            <a href="/contact" class="nav-item nav-link <%= currentRoute === '/contact' ? 'active' : '' %>">Contact</a>
+
+            <!-- User Dropdown Start -->
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="userDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa fa-user"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    <% if (!isAuthenticated) { %>
+                        <li><a class="dropdown-item" href="/auth/login">Login</a></li>
+                        <li><a class="dropdown-item" href="/auth/signup">Sign Up</a></li>
+                        <% } else { %>
+                            <li><a class="dropdown-item" href="/auth/logout">Log Out</a></li>
+                            <% } %>
+                </ul>
+            </div>
+            <!-- User Dropdown End -->
+
+        </div>
+        <a href="/booking"><button>Book Your Journey</button></a>
+    </div>
+</nav>
+<!-- Navbar End -->

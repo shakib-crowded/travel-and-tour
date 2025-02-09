@@ -1,0 +1,49 @@
+<% layout("../Layout/boilerplate") %>
+
+
+    <link rel="stylesheet" href="/css/user-enter.css">
+    <div class="container">
+
+        <form class="form needs-validation" action="/auth/signup" method="post" novalidate>
+            <p class="title">Register </p>
+            <p class="message">Signup now and get full access to our app. </p>
+            <div class="flex">
+                <label>
+                    <input required name="firstName" placeholder="" type="text" class="input" id="firstName">
+                    <span>Firstname</span>
+                    <div class="invalid-feedback">Please enter your first name.</div>
+                </label>
+
+                <label>
+                    <input required name="lastName" placeholder="" type="text" class="input" id="lastName">
+                    <span>Lastname</span>
+                    <div class="invalid-feedback">Please enter your last name.</div>
+
+                </label>
+            </div>
+
+            <label>
+                <input required name="email" placeholder="" type="email" class="input form-control" id="email">
+                <span>Email</span>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+            </label>
+
+            <label>
+                <input required name="password" placeholder="" type="password" class="input form-control" id="password">
+                <span>Password</span>
+                <div class="invalid-feedback">Enter Valid Password.</div>
+            </label>
+            <label>
+                <input required name="confirmPassword" placeholder="" type="password" class="input"
+                    id="confirmPassword">
+                <span>Confirm password</span>
+                <div class="invalid-feedback">Enter Valid Confirm Passwords.</div>
+
+            </label>
+            <button class="submit">Sign Up</button>
+            <p class="signin">Already have an acount ? <a href="/auth/login">Log In</a> </p>
+        </form>
+
+
+
+    </div>

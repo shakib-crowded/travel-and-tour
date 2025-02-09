@@ -1,0 +1,119 @@
+<% layout("../Layout/boilerplate") %>
+
+
+    <!--Hero Start-->
+
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-center py-5">
+                <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Query</h1>
+                    <nav aria-label="breadcrumb">
+                        <p id="paragraph" style="font-weight: 600; font-size: 17px; color: white;">Ask Anything
+                            About Your Booking. <br> Get Instant Assistance & Connect with Our Guides!</p>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--Hero End -->
+
+    <!--Tour Booking Start -->
+    <section id="online-booking">
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 80px;">
+            <div class="container">
+                <div class="booking p-5">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-md-6 text-white">
+                            <h6 class="text-white text-uppercase">Querying</h6>
+                            <h1 class="text-white mb-4">Tour Querying</h1>
+                            <p class="mb-4">Querying your next adventure has never been easier with our online booking
+                                system. Simply browse through our extensive selection of travel destinations and
+                                packages
+                                tailored to suit your preferences. Once you’ve chosen the perfect getaway, you can
+                                complete
+                                your booking securely with just a few clicks, using multiple payment options for your
+                                convenience. Enjoy instant confirmation via email, allowing you to start planning your
+                                trip
+                                immediately. With our user-friendly platform, your dream vacation is only a few clicks
+                                away!
+                            </p>
+                            <a class="btn btn-outline-light py-3 px-5 mt-2" href="">Read More</a>
+                        </div>
+                        <div class="col-md-6">
+                            <h1 class="text-white mb-4">Your Query</h1>
+                            <form method="post" action="/query" class="row g-3 needs-validation" novalidate
+                                id="queryForm">
+                                <div class="alert alert-success" id="successAlert" style="display: none;">
+                                    Your Booking Query Has Been Submitted, We'll Contact You Soon.
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control bg-transparent" id="name"
+                                                placeholder="Your Name" name="name" style="color: white;" required>
+                                            <label for="name">Your Name</label>
+                                            <div class="invalid-feedback">Please enter your name.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control bg-transparent" id="email"
+                                                placeholder="Your Email" name="email" style="color: white;" required>
+                                            <label for="email">Your Email</label>
+                                            <div class="invalid-feedback">Please enter a valid email.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating date" id="date3" data-target-input="nearest">
+                                            <input type="date" class="form-control bg-transparent datetimepicker-input"
+                                                id="datetime" placeholder="Date" name="date" style="color: white;"
+                                                required>
+                                            <label for="datetime">Date</label>
+                                            <div class="invalid-feedback">Please enter a valid date.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select bg-transparent" id="select1" name="destination"
+                                                required>
+                                                <option value="">Choose a destination</option>
+                                                <option value="Thailand">Thailand</option>
+                                                <option value="Malaysia">Malaysia</option>
+                                                <option value="Singapore">Singapore</option>
+                                                <option value="Indonesia">Indonesia</option>
+                                                <option value="Australia">Australia</option>
+                                                <option value="Maldives">Maldives</option>
+                                            </select>
+                                            <label for="select1">Destination</label>
+                                            <div class="invalid-feedback">Please select a destination.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control bg-transparent" placeholder="Special Request"
+                                                id="message" style="height: 100px; color: white;" name="specialRequest"
+                                                required></textarea>
+                                            <label for="message">Special Request</label>
+                                            <div class="invalid-feedback">Please enter your special request.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <button class="btn btn-outline-light w-100 py-3" type="submit">Query
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tour Querying End -->

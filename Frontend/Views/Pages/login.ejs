@@ -1,0 +1,25 @@
+<!-- <% layout("../Layout/boilerplate") %> -->
+
+<link rel="stylesheet" href="/css/user-enter.css">
+
+<div class="container">
+    <form class="form needs-validation" action="/auth/login" method="post" novalidate>
+        <p class="title">Log In</p>
+        <p class="message">Welcome back to our app.</p>
+
+        <label>
+            <input required name="email" type="email" class="input form-control" id="email">
+            <span>Email</span>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+        </label>
+
+        <label>
+            <input required name="password" type="password" class="input form-control" id="password">
+            <span>Password</span>
+            <div class="invalid-feedback">Password cannot be empty.</div>
+        </label>
+
+        <button class="submit btn btn-primary">Login</button>
+        <p class="signin">Don't have an account? <a href="/auth/signup">Sign Up</a></p>
+    </form>
+</div>
