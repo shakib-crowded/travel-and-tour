@@ -62,6 +62,12 @@ app.use("/testimonials", testimonialsRouter);
 app.use("/travel-guides", travel_guidesRouter);
 app.use("/auth", userEnter);
 
+// Page 404 Error
+
+app.use((req, res, next) => {
+  res.status(404).render("error_404");
+});
+
 // Connect to MongoDB
 
 // Start the server
